@@ -1,0 +1,88 @@
+body {
+    font-family: "Microsoft JhengHei", sans-serif;
+    text-align: center;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: #333;
+    font-size: 36px;
+    margin-top: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.board {
+    width: 320px;
+    height: 320px;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 5px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.cell {
+    background-color: white;
+    border: 2px solid #888;
+    font-size: 3em;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 10px;
+    user-select: none;  /* 防止玩家選擇文本 */
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.1);
+}
+
+.cell:active {
+    transform: scale(0.95);
+}
+
+.controls {
+    margin-top: 30px;
+}
+
+#status {
+    font-size: 20px;
+    color: #333;
+    font-weight: bold;
+    margin-top: 20px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:active {
+    background-color: #3e8e41;
+}
+
+button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
